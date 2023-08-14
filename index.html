@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipped Cards</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="tesk2.css" rel="stylesheet">
+    <title>Game Login</title>
+</head>
+<body>
+
+    <section id="enterPage" class="background-radial-gradient overflow-hidden">
+        <section class="background-radial-gradient overflow-hidden">
+            <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+              <div class="row gx-lg-5 align-items-center mb-5">
+                <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                  <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                    Memory Game <br />
+                    <span style="color: hsl(218, 81%, 75%)">Let's play</span>
+                  </h1>
+                  <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                    welcome to our memory game, we built this game for children how want to improve thier memory.
+                    You have 15 minute maximum, but your goal is to do it as fast as you can.
+                    You should choose the number of cards you want to play.
+                    for palying Write you'r name, password and choose the number of cards.
+                    Enjoy!
+                </p>
+                </div>
+          
+                <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                  <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                  <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+          
+                  <div class="card bg-glass">
+                    <div class="card-body px-4 py-5 px-md-5">
+                      <form>
+                        <h1 style="position:relative;top:-20px">Player Info:</h1>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <input type="text" id="firstName" class="form-control" required>
+                              <label class="form-label" for="form3Example1">First name</label>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <input type="text" id="LastName" class="form-control" required>
+                              <label class="form-label" for="form3Example2">Last name</label>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <!-- Num of card input -->
+                        <div class="form-outline mb-4">
+                            <input type="number" class="form-control" id="cards" min="1" max="30" required>
+                            <label for="cards">Number of Couple Cards:</label>
+                        </div>
+    
+                        <!-- Submit button -->
+                        <button type="submit" id="startButton" class="btn btn-primary btn-block mb-4">
+                          Start Game!
+                        </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      </section>
+
+
+      <section id="gamePage" style="display: none;">
+     <div id="gamePage" class="hidden">
+        <div class="container text-center">
+            <div class="row justify-content-center" style="width: 550px;margin-left: 250px;position: relative;">
+                <div class="col-auto">
+                    <div class="card timer text ">
+                        <p class="card-text" id="digit1">1</p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card timer text ">
+                        <p class="card-text" id="digit2">5</p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card timer text">
+                        <p class="card-text">:</p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card timer text">
+                        <p class="card-text" id="digit3">0</p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="card timer text">
+                        <p class="card-text" id="digit4">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div  id="addSec"class="content" col align-self-center></div>
+
+        <div id="elapsed-time" class="mt-4" style="display: none">
+          
+        </div>
+    </div>
+</section>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
